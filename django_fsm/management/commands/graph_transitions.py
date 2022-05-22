@@ -198,7 +198,7 @@ class Command(BaseCommand):
 
                 if len(field_spec) == 1:
                     if NEW_META_API:
-                        app = apps.get_app(field_spec[0])
+                        app = apps.get_app_config(field_spec[0])
                         models = apps.get_models(app)
                     else:
                         app = get_app(field_spec[0])
